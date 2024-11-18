@@ -5,7 +5,7 @@ pipeline {
     stages{
         stage('build'){
             steps{
-                sh ' echo "Build is successful at build for WEBHOOK"'
+                sh ' echo "Build is successful at build for WebHook"'
             }
         }
         
