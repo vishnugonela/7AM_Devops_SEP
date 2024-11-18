@@ -5,7 +5,7 @@ pipeline {
     stages{
         stage('build'){
             steps{
-                sh ' echo "Build is successful at build from github"'
+                sh ' echo "Build is successful at build from github dir"'
             }
         }
         
