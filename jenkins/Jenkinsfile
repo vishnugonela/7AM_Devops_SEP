@@ -12,7 +12,7 @@ pipeline {
         
         stage('test'){
             steps{
-                sh ' echo "Build is successful at test"'
+                sh ' echo "Build is successful at test from GITHUB"'
             }
         }
 
