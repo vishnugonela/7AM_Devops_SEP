@@ -3,7 +3,7 @@
 # Function to validate if input is a number
 is_number() {
     local input="$1"
-    [[ "$input" =~ ^[0-9]+$ ]]
+    [[ "$input" =~ [0-9] ]]
 }
 
 # Prompt for user input
