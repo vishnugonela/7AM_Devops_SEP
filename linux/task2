@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    try {
+                        // Your build steps here
+                        echo 'Building...'
+                        // to Simulate a build step that might fail
+                        sh 'exit 1'
+                    } catch (Exception e) {
+                        // Handle the error
+                        echo "Build failed: ${e.message}"
+                        //  you can fail the build
+                        currentBuild.result = 'FAILURE'
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'This will always run, regardless of success or failure'
+        }
+        success {
+            echo 'This will run only if the build succeeds'
+        }
+        failure {
+            echo 'This will run only if the build fails'
+        }
+    }
+}
