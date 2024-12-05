@@ -1,0 +1,5 @@
+FROM ubuntu:22.04
+RUN apt update && apt install apache2 -y
+RUN echo "app is running" > /var/www/html/index.html
+EXPOSE 80
+ENTRYPOINT [ "/bin/bash", "-c" , "service apache2 start && bash"  ]
