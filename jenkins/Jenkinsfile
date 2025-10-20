@@ -3,17 +3,17 @@ pipeline{
   stages{
     stage('Build'){
       steps{
-        ch 'echo "Build is successful"'
+        sh 'echo "Build is successful"'
       }
     }
     stage('Test'){
       steps{
-        ch 'echo "Tested positive"'
+        sh 'echo "Tested positive"'
       }
     }
     stage('Deploy'){
       steps{
-        ch 'echo "Deployed successfully"'
+        sh 'echo "Deployed successfully"'
       }
     }
   }
